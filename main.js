@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
         input.classList.add('input');
         input.placeholder = "enter number of cards";
         input.type = 'number';
+        input.min = '4';
+        input.step = '2';
         const button = document.createElement('button');
         button.classList.add('button');
         button.textContent = 'start game';
