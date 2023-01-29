@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 end.textContent = "you win!";
                 end.classList.add('end-card');
                 const newGameBtn = document.createElement('button');
+                newGameBtn.classList.add('new-game');
                 newGameBtn.textContent = "start new game";
                 newGameBtn.addEventListener('click', function() {
                     
@@ -160,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 end.textContent = "time's up!";
                 end.classList.add('end-card');
                 const newGameBtn = document.createElement('button');
+                newGameBtn.classList.add('new-game');
                 newGameBtn.textContent = "start new game";
                 newGameBtn.addEventListener('click', function() {
                     clearInterval(timerId);
