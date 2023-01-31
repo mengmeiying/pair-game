@@ -38,8 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         button.classList.add('button');
         button.textContent = 'start game';
 
+        const ruleText = document.createElement('p');
+        ruleText.classList.add('rule-text');
+        ruleText.textContent = 'number must be from 4 to 10';
+
         function isNumberValid(number) {
-            return (number % 2 === 0) && (number >= 4) && (number <= 100);
+            return (number % 2 === 0) && (number >= 4) && (number <= 10);
         }
 
         form.addEventListener('submit', function(e){
@@ -55,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
 
         form.appendChild(input);
+        form.appendChild(ruleText);
         form.appendChild(button);
         
         let root = document.querySelector('#root');

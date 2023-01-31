@@ -5,7 +5,8 @@
 body {
     height: 100vw;
     background: rgb(34,193,195);
-background: linear-gradient(118deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: linear-gradient(118deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    font-family: sans-serif;
 }
 
 .container {
@@ -64,15 +65,41 @@ background: linear-gradient(118deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
     display: flex;
     flex-direction: column;
     align-items: center;    
-    padding-top: 50px;
+    padding: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #ffffff30;
 }
 
 .input {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 10px 20px;
     border: 2px solid black;
     border-radius: 10px;
+    background-color: #ffffffb0;
     font-size: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input:hover {
+    background-color: #ffffffd0;
+}
+
+.input:active {
+    background-color: #fffffff0;
+}
+
+.input:focus {
+    background-color: #fffffff0;
+}
+
+.rule-text {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 22px;
 }
 
 .button {
@@ -80,7 +107,21 @@ background: linear-gradient(118deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
     font-size: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #ffffffb0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ffffffd0;
+}
+
+.button:active {
+    background-color: #fffffff0;
+}
+
+.button:focus {
+    background-color: #fffffff0;
 }
 
 .timer {
