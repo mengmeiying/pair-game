@@ -82,8 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let cardsCount = 0;
         let count = 1;
         const openedCards = [];
+        let clicksCount = 0;
 
         function cardClick (cardsCount, id) {
+            clicksCount++;
             let card = document.getElementById(id)
             if (openedCardsNumber === cardsNumber - 2) {
                 if (cardsCount === 1) {
@@ -135,6 +137,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const end = document.createElement('div');
                 end.textContent = "you win!";
                 end.classList.add('end-card');
+
+                const secondsText = document.createElement('div');
+                secondsText.textContent = `it took you ${60 - timerElement.textContent} seconds`;
+                secondsText.classList.add('seconds');
+
+                const clicksText = document.createElement('div');
+                clicksText.textContent = `and ${clicksCount} clicks`;
+                clicksText.classList.add('clicks');
+
                 const newGameBtn = document.createElement('button');
                 newGameBtn.classList.add('new-game');
                 newGameBtn.textContent = "start new game";
@@ -142,9 +153,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     createForm();
                 });
-                end.appendChild(newGameBtn);
+                end.append(secondsText);
+                end.append(clicksText);
+                end.append(newGameBtn);
                 clearInterval(timerId);
                 root.append(end);
+                
             }
         }
 
