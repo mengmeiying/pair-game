@@ -35,11 +35,11 @@ body {
 
 .closed {
     font-size: 0;
-    background-color: #e5e5e5;
+    background-color: #ffc5d0;
 }
 
 .good {
-    background-color: yellow;
+    background-color: #00ffbf;
 }
 
 .end-card {
